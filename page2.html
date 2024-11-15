@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Water Rafting</title>
+    <link rel="stylesheet" href="syte-plan-rafting.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h3.m-bh {
+            font-size: 28px;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h3 .m-bh-sub {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #327297, #A9C6D8);
+            color: white;
+            padding: 3px 20px; /* パディングを少し小さくしました */
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            gap: 20px;
+            border: 2px solid #A9C6D8;
+            border-radius: 10px;
+        }
+        
+        header a img {
+            width: 100px; /* ロゴを少し小さくしました */
+            height: auto;
+            border-radius: 50%;
+            border: 2px solid #d9c2a3;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: white;
+            font-size: 14px; 
+        }
+        
+
+        /* Hero Image */
+        #hero {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            
+
+        }
+
+        #hero-box {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        #hero_image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+
+        /* Section Styling */
+        .p-top-info, .p-top-facility, .p-top-access {
+            padding: 50px 20px;
+        }
+
+        .p-top-info-area, .p-top-facility-area, .p-top-access-area {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .p-top-info-left, .p-top-info-right, .p-top-facility-article {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .p-top-info-left:hover, .p-top-info-right:hover, .p-top-facility-article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .p-top-facility-article img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .p-top-facility-article-text {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .p-top-facility-article-detail {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .p-top-access-text {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Modal Styles */
+        .p-gallery-modal {
+            display: none;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2980b9;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a id="logo_link" href="#">
+            <img src="images/logo.jpg" alt="Adventure Logo">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="page2.html">Page 2</a>
+            <a href="site-plan-rafting.html">Site Plan</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div id="hero">
+        <div id="hero-box">
+            <img id="hero_image" src="images/rafting8_600.jpg" alt="People enjoying white water rafting">
+        </div>
+    </div>
+
+    <section class="p-top-info">
+        <h3 class="m-bh">
+            NEWS
+            <span class="m-bh-sub p-top-info-subttl">
+                Upcoming Events
+            </span>
+        </h3>
+        <div class="p-top-info-area clearfix">
+            <div class="p-top-info-left">
+                <div class="p-top-info-inner">
+                    <p class="p-top-info-ttl p-top-info-news">
+                        <span>news</span>
+                    </p>
+                    <div class="p-top-info-news-list">
+                        <ul>
+                            <li class="clearfix">
+                                <a data-target="modal" class="p-top-info-news-modal-open">
+                                    <p class="p-top-info-news-list-date">2024/10/31</p>
+                                    <p class="p-top-info-news-list-article">We had a special Halloween event!!</p>
+                                </a>
+                                <div class="p-gallery-modal">
+                                    <div class="p-top-info-news-modal-content">
+                                        <p class="p-top-info-news-modal-close">
+                                            <img src="https://www.fukunoyu.com/wp/wp-content/themes/fukunoyu/images/nagasaki/img_modal_close.png" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-top-info-right">
+                <div class="p-top-info-inner">
+                    <p class="p-top-info-ttl p-top-info-business">
+                        <span>Business Day</span>
+                    </p>
+                    <div class="p-top-info-business-table">
+                        <table>
+                            <tr>
+                                <th>Business hour</th>
+                                <td>
+                                    ■Mon～Thur・Sun<br>
+                                    9:30～Next1:00 (Final reception 0:30)<br>
+                                    ■Fri・Sat・Holiday Eve<br>
+                                    9:30～Next2:00 (Final reception 1:30)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Off Day</th>
+                                <td>Open year-round (except maintenance days)</td>
+                            </tr>
+                            <tr>
+                                <th>Access</th>
+                                <td>42 S 1st W, ID 83440</td>
+                            </tr>
+                            <tr>
+                                <th>Phone call</th>
+                                <td><a href="tel:080-9109-0782">080-9109-0782</a></td>
+                            </tr>
+                            <tr>
+                                <th>Parking lot</th>
+                                <td>300 cars <br>※No parking for large vehicles (buses, trucks, etc.)</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>Free Wi-Fi</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td><a href="/guide/" target="_blank" style="color:#333;">User Guide</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="p-top-access">
+        <div class="p-top-access-text">
+            <h3>Directions to our Facility</h3>
+            <p>Conveniently located near beautiful natural landscapes and easy access to major highways. Make your visit part of your adventure!</p>
+        </div>
+    </section>
+    <section class="p-top-facility">
+        <h3 class="m-bh">
+            -The Great River-
+            <span class="m-bh-sub p-top-facility-subttl">Facility Information</span>
+        </h3>
+        <p class="p-top-facility-text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+            Experience the thrill of white water rafting on the Salmon River and other exciting rivers!<br>
+            From the rugged beauty of Idaho's wilderness to the breathtaking views of the Grand Canyon, our rafting adventures offer unforgettable experiences for thrill-seekers.
+        </p>
+        <div class="p-top-facility-area">
+            <div class="p-top-facility-area-top clearfix">
+                <div class="p-top-facility-article">
+                    <p class="p-top-facility-article-image">
+                        <img src="images/R.jpg" alt="Main Fork of the Salmon River">
+                    </p>
+                    <p class="p-top-facility-article-text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                        Main Fork of the Salmon River, Idaho
+                    </p>
+                    <p class="p-top-facility-article-detail">
+                        Nestled deep in the Frank Church Wilderness of No Return winds the Salmon river. The Salmon was given the nickname long ago as the River of No Return by the people living near it because of the number of rapids.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Added content below -->
+            <div class="p-top-facility-article">
+                <p class="p-top-facility-article-image">
+                    <img src="images/OIP.jpg" alt="Desolation Canyon">
+                </p>
+                <p class="p-top-facility-article-text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                    Desolation and Gray Canyon, Utah
+                </p>
+                <p class="p-top-facility-article-detail">
+                    Winding through canyons in central Utah, the Green River flows towards the mighty Colorado River. This 84-mile trip through some of the most desolate land offers stunning views, great rapids, and a history-rich adventure.
+                </p>
+            </div>
+            <div class="p-top-facility-article">
+                <p class="p-top-facility-article-image">
+                    <img src="images/49.webp" alt="Grand Canyon Rafting">
+                </p>
+                <p class="p-top-facility-article-text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                    Grand Canyon, Arizona
+                </p>
+                <p class="p-top-facility-article-detail">
+                    Experience world-class whitewater rafting through the Grand Canyon! With exhilarating rapids and breathtaking scenery, this trip offers one of the most unforgettable adventures in the world.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-top-access">
+        <h3 class="m-bh">
+            Access
+            <span class="m-bh-sub p-top-access-subttl">Location</span>
+        </h3>
+        <p class="p-top-access-text">
+            42 S 1st W, ID 83440
+        </p>
+        <div class="p-top-access-area">
+            <div id="container-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.934176410938!2d129.85127524282538!3d32.76748106765227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x351552d3e06fa949%3A0xe52b4a7a11e3fae8!2z5bGx5Z2x55m65L2V55yM!5e0!3m2!1sja!2sjp!4v1661437629732!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Adventure Rafting Co.</p>
+    </footer>
+</body>
+</html>
+
